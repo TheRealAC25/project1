@@ -24,3 +24,5 @@ data_load_state.text('Loading data...done!')
 
 st.subheader('Raw data')
 st.write(data)
+
+st.bar_chart(hist_values)
