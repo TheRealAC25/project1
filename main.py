@@ -22,6 +22,9 @@ data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
 
+hist_values = np.histogram(
+    data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
+
 st.subheader('Raw data')
 st.write(data)
 
